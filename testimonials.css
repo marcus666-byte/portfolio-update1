@@ -1,0 +1,580 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h2,
+h3,
+a {
+  color: #34495e;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo {
+  margin: 0;
+  font-size: large;
+}
+
+.main-nav {
+  margin-top: 5px;
+}
+.logo a,
+.main-nav a {
+  padding: 10px 15px;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+}
+
+.main-nav a {
+  color: #34495e;
+  font-size: large;
+}
+
+.main-nav a:hover {
+  color: #718daa;
+}
+
+.header {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border: 1px solid #64482a;
+  background-color: #f5f29c;
+  -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.all {
+  padding: 50px, 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* =========================================================== 
+  Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+  .header,
+  .main-nav {
+    display: flex;
+  }
+  .header {
+    flex-direction: column;
+    align-items: center;
+    .header {
+      width: 80%;
+      margin: 0 auto;
+      max-width: 1150px;
+    }
+  }
+}
+
+@media (min-width: 1080px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+html {
+  min-height: 100%;
+}
+
+h1 {
+  color: white;
+  padding-left: 10px;
+}
+
+#hover {
+  color: rgba(188, 175, 204, 0.9);
+}
+
+h2#testimonials {
+  color: #fffae3;
+}
+
+div#all {
+  width: 100%;
+  height: 100%;
+}
+
+/* generic css */
+
+.view {
+  margin: 10px;
+  /* float: left; */
+  border: 10px solid rgb(83, 67, 45);
+  /* overflow: hidden; */
+  /* position: relative; */
+  text-align: center;
+  box-shadow: 1px 1px 2px #e6e6e6;
+  /* cursor: default; */
+  /* right: -60px; */
+  /* top: 100px; */
+}
+
+.view:hover {
+  box-shadow: 0px 60px 16px rgba(0, 0, 0, 0.75);
+}
+
+.view .mask,
+.view .content {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+
+  top: 0;
+  left: 0;
+}
+
+.view img {
+  display: block;
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.view h2 {
+  text-transform: uppercase;
+  color: black;
+  text-align: center;
+  position: relative;
+  font-size: 17px;
+  font-family: Raleway, serif;
+  padding: 10px;
+  /*background: rgba(0, 0, 0, 0.8);*/
+  margin: 20px 0 0 0;
+}
+
+.view p {
+  font-family: Merriweather, serif;
+  font-style: italic;
+  font-size: 20px;
+  position: relative;
+  color: black;
+  text-shadow: black;
+  padding: 0px 20px 0px;
+  text-align: center;
+}
+
+/*1*/
+
+.view-first img {
+  transform: scaleY(1);
+  transition: all 0.7s ease-in-out;
+}
+
+.view-first .mask {
+  background-color: rgb(158, 163, 177);
+  transition: all 0.5s linear;
+  opacity: 0;
+}
+
+.view-first h2 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  background: transparent;
+  margin: 20px 40px 0px 40px;
+  transform: scale(0);
+  color: #333;
+  transition: all 0.5s linear;
+  opacity: 0;
+  color: white;
+}
+
+.view-first p {
+  color: black;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.5s linear;
+}
+
+.view-first a.info {
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.5s linear;
+}
+
+.view-first:hover img {
+  -webkit-transform: scale(10);
+  transform: scale(10);
+  opacity: 0;
+}
+
+.view-first:hover .mask {
+  opacity: 1;
+}
+
+.view-first:hover h2,
+.view-first:hover p,
+.view-first:hover a.info {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.view-first:hover p {
+  transition-delay: 0.1s;
+}
+
+.view-first:hover a.info {
+  transition-delay: 0.2s;
+}
+
+/*2*/
+
+.view-second img {
+  transform: scaleY(1);
+  transition: all 0.7s ease-in-out;
+}
+
+.view-second .mask {
+  background-color: rgb(158, 163, 177);
+  transition: all 0.5s linear;
+  opacity: 0;
+}
+
+.view-second h2 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  background: transparent;
+  margin: 20px 40px 0px 40px;
+  transform: scale(0);
+  color: #333;
+  transition: all 0.5s linear;
+  opacity: 0;
+  color: white;
+}
+
+.view-second p {
+  color: black;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.5s linear;
+}
+
+.view-second a.info {
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.5s linear;
+}
+
+.view-second:hover img {
+  -webkit-transform: scale(10);
+  transform: scale(10);
+  opacity: 0;
+}
+
+.view-second:hover .mask {
+  opacity: 1;
+}
+
+.view-second:hover h2,
+.view-second:hover p,
+.view-second:hover a.info {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.view-second:hover p {
+  transition-delay: 0.1s;
+}
+
+.view-second:hover a.info {
+  transition-delay: 0.2s;
+}
+
+/*3*/
+
+.view-tenth img {
+  transform: scaleY(1);
+  transition: all 0.7s ease-in-out;
+}
+
+.view-tenth .mask {
+  background-color: rgb(158, 163, 177);
+  transition: all 0.5s linear;
+  opacity: 0;
+}
+
+.view-tenth h2 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  background: transparent;
+  margin: 20px 40px 0px 40px;
+  transform: scale(0);
+  color: white;
+  transition: all 0.5s linear;
+  opacity: 0;
+}
+
+.view-tenth p {
+  color: black;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.5s linear;
+}
+
+.view-tenth a.info {
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.5s linear;
+}
+
+.view-tenth:hover img {
+  -webkit-transform: scale(10);
+  transform: scale(10);
+  opacity: 0;
+}
+
+.view-tenth:hover .mask {
+  opacity: 1;
+}
+
+.view-tenth:hover h2,
+.view-tenth:hover p,
+.view-tenth:hover a.info {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.view-forth img {
+  transform: scaleY(1);
+  transition: all 0.7s ease-in-out;
+}
+
+.view-forth .mask {
+  background-color: rgb(158, 163, 177);
+  transition: all 0.5s linear;
+  opacity: 0;
+}
+
+.view-forth h2 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  background: transparent;
+  margin: 20px 40px 0px 40px;
+  transform: scale(0);
+  color: #333;
+  transition: all 0.5s linear;
+  opacity: 0;
+  color: white;
+}
+
+.view-forth p {
+  color: black;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.5s linear;
+}
+
+.view-forth a.info {
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.5s linear;
+}
+
+.view-forth:hover img {
+  -webkit-transform: scale(10);
+  transform: scale(10);
+  opacity: 0;
+}
+
+.view-forth:hover .mask {
+  opacity: 1;
+}
+
+.view-forth:hover h2,
+.view-forth:hover p,
+.view-forth:hover a.info {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.view-forth:hover p {
+  transition-delay: 0.1s;
+}
+
+.view-forth:hover a.info {
+  transition-delay: 0.2s;
+}
+
+.view-fifth img {
+  transform: scaleY(1);
+  transition: all 0.7s ease-in-out;
+}
+
+.view-fifth .mask {
+  background-color: rgb(158, 163, 177);
+  transition: all 0.5s linear;
+  opacity: 0;
+}
+
+.view-fifth h2 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  background: transparent;
+  margin: 20px 40px 0px 40px;
+  transform: scale(0);
+  color: white;
+  transition: all 0.5s linear;
+  opacity: 0;
+}
+
+.view-fifth p {
+  color: black;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.5s linear;
+}
+
+.view-fifth a.info {
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.5s linear;
+}
+
+.view-fifth:hover img {
+  -webkit-transform: scale(10);
+  transform: scale(10);
+  opacity: 0;
+}
+
+.view-fifth:hover .mask {
+  opacity: 1;
+}
+
+.view-fifth:hover h2,
+.view-fifth:hover p,
+.view-fifth:hover a.info {
+  transform: scale(1);
+  opacity: 1;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Squada+One&display=swap");
+
+body {
+  background: bisque;
+}
+
+.container1 {
+  width: 100%;
+  text-align: center;
+}
+
+h1 u {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-top: 50px;
+  font-family: "Squada One", serif;
+  font-size: 4vw;
+  color: #64482a;
+  text-align: center;
+  bottom: 190px;
+  animation-delay: 1150ms;
+  animation-name: flash-a;
+  animation-duration: 1000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+@keyframes flash-a {
+  0%,
+  89% {
+    color: #64482a;
+  }
+  90%,
+  100% {
+    color: #f5f29c;
+  }
+}
+
+@media (min-width: 667px) {
+  .all {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .h1 .u {
+    font-size: 50px;
+  }
+  .view {
+    margin: 10px;
+    float: left;
+    border: 10px solid rgb(83, 67, 45);
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    box-shadow: 1px 1px 2px #e6e6e6;
+    cursor: default;
+    right: -60px;
+    top: 100px;
+  }
+
+  .view-second {
+    margin: 10px;
+    float: left;
+    border: 10px solid rgb(83, 67, 45);
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    box-shadow: 1px 1px 2px #e6e6e6;
+    cursor: default;
+
+    top: 100px;
+  }
+
+  .view-tenth {
+    margin: 10px;
+    float: left;
+    border: 10px solid rgb(83, 67, 45);
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    box-shadow: 1px 1px 2px #e6e6e6;
+    cursor: default;
+
+    top: 100px;
+  }
+
+  .view-forth {
+    margin: 10px;
+    float: left;
+    border: 10px solid rgb(83, 67, 45);
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    box-shadow: 1px 1px 2px #e6e6e6;
+    cursor: default;
+
+    top: 100px;
+  }
+
+  .view-fifth {
+    margin: 10px;
+    float: left;
+    border: 10px solid rgb(83, 67, 45);
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    box-shadow: 1px 1px 2px #e6e6e6;
+    cursor: default;
+
+    top: 100px;
+  }
+}

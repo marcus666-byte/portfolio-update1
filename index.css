@@ -1,0 +1,276 @@
+.background {
+  background-color: darkgoldenrod;
+}
+
+.landing {
+  text-align: center;
+  text-transform: uppercase;
+  font-style: oblique;
+
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  transform: translate(-50);
+  color: rgb(83, 67, 45);
+}
+
+span {
+  display: inline-block;
+  font-weight: bolder;
+  font-size: 30px;
+  animation: mover 6s linear infinite;
+  margin-right: 300px;
+  margin-left: 200px;
+}
+
+@keyframes mover {
+  0% {
+    text-shadow: 0 0 30px rgba(0, 0, 0, 0);
+  }
+
+  50% {
+    text-shadow: 0 0 30px rgba(0, 0, 0, 30);
+    transform: translateY(30px);
+  }
+  100% {
+    text-shadow: 0 0 30px rgba(0, 0, 0, 0);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h2,
+h3,
+a {
+  color: #34495e;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo {
+  margin: 0;
+  font-size: large;
+}
+
+.main-nav {
+  margin-top: 5px;
+}
+.logo a,
+.main-nav a {
+  padding: 10px 15px;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+}
+
+.main-nav a {
+  color: #34495e;
+  font-size: large;
+}
+
+.main-nav a:hover {
+  color: #718daa;
+}
+
+.header {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border: 1px solid #64482a;
+  background-color: #f5f29c;
+  -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+  .header,
+  .main-nav {
+    display: flex;
+  }
+  .header {
+    flex-direction: column;
+    align-items: center;
+    .header {
+      width: 80%;
+      margin: 0 auto;
+      max-width: 1150px;
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+img {
+  height: 300px;
+  width: 300px;
+  float: right;
+  border: 56px black;
+  margin-right: 500px;
+  position: static;
+  bottom: 300px;
+  border-radius: 50%;
+}
+
+#footer {
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  background-color: rgb(158, 163, 177);
+  display: inline-block;
+  margin: auto;
+  text-align: center;
+}
+#footer p {
+  font-family: Tahoma, Geneva, sans-serif;
+  text-align: center;
+  color: white;
+}
+
+/* SOCIAL MEDIA _________________________________________*/
+
+.box {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  line-height: 52px;
+  font-size: 30px;
+  text-align: center;
+  color: teal;
+  border-radius: 5px;
+  background: #dfdfdf;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.box:hover {
+  transition: 0.3s;
+  color: white;
+}
+#facebook:hover {
+  background-color: grey;
+}
+#facebook a {
+  color: black;
+}
+
+#behance:hover {
+  background-color: grey;
+}
+#behance a {
+  color: black;
+}
+
+#codepen:hover {
+  background-color: grey;
+}
+
+#codepen a {
+  color: gray;
+}
+
+.fafa-github {
+  color: black;
+}
+
+/* media mobile response navbar*/
+
+@media (min-width: 200px) and (max-width: 480px) {
+  .main-nav {
+    margin-top: 5px;
+    overflow: hidden;
+  }
+
+  .logo {
+    margin: 0;
+    font-size: large;
+  }
+
+  .logo a,
+  .main-nav a {
+    padding: 10px 15px;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+  }
+
+  .main-nav a {
+    color: #34495e;
+    font-size: large;
+  }
+
+  .main-nav a:hover {
+    color: #718daa;
+  }
+
+  img {
+    height: 200px;
+    width: 180px;
+    float: right;
+    border: 56px black;
+    margin-right: 155px;
+    position: static;
+    bottom: 300px;
+    border-radius: 50%;
+    margin-top: 80px;
+  }
+  .landing {
+    text-align: center;
+    text-transform: uppercase;
+    font-style: oblique;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    transform: translate(-50);
+    color: rgb(83, 67, 45);
+  }
+
+  span {
+    display: inline-block;
+    font-weight: bolder;
+    font-size: 20px;
+    animation: mover 6s linear infinite;
+    margin-right: 100px;
+    margin-left: 100px;
+  }
+  @keyframes mover {
+    0% {
+      text-shadow: 0 0 30px rgba(0, 0, 0, 0);
+    }
+
+    50% {
+      text-shadow: 0 0 30px rgba(0, 0, 0, 30);
+      transform: translateY(30px);
+    }
+    100% {
+      text-shadow: 0 0 30px rgba(0, 0, 0, 0);
+    }
+  }
+}

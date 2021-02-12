@@ -1,0 +1,590 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 10px;
+  }
+  
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  h2,
+  h3,
+  a {
+    color: #34495e;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .logo {
+    margin: 0;
+    font-size: large;
+  }
+  
+  .main-nav {
+    margin-top: 5px;
+  }
+  .logo a,
+  .main-nav a {
+    padding: 10px 15px;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+  }
+  
+  .main-nav a {
+    color: #34495e;
+    font-size: large;
+  }
+  
+  .main-nav a:hover {
+    color: #718daa;
+  }
+  
+  .header {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border: 1px solid #64482a;
+    background-color: #f5f29c;
+    -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+  
+  /* ================================= 
+    Media Queries
+  ==================================== */
+  
+  @media (min-width: 769px) {
+    .header,
+    .main-nav {
+      display: flex;
+    }
+    .header {
+      flex-direction: column;
+      align-items: center;
+      .header {
+        width: 80%;
+        margin: 0 auto;
+        max-width: 1150px;
+      }
+    }
+  }
+  
+  @media (min-width: 1025px) {
+    .header {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  
+  /* Split the screen in half */
+  .split {
+    height: 400px;
+    width: 400px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+    margin-top: 90px;
+  }
+  
+  /* Control the left side */
+  .left {
+    left: 0;
+  
+    margin-top: 200px;
+    margin-left: 50px;
+    height: 40vh;
+    width: 40vh;
+    overflow-y: hidden;
+    padding: 0;
+  }
+  
+  .left:hover {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.75);
+  }
+  
+  /* Control the right side */
+  .right {
+    right: 0;
+  
+    margin-top: 200px;
+    margin-right: 30px;
+    height: 40vh;
+    width: 40vh;
+    overflow-y: hidden;
+    padding: 0;
+  }
+  
+  .right:hover {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.75);
+  }
+  
+  /* If you want the content centered horizontally and vertically */
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  /* Style the image inside the centered container, if needed */
+  .centered img {
+    width: 150px;
+    height: 40vh;
+    width: 40vh;
+  }
+  
+  .mid {
+    margin-top: 200px;
+    height: 40vh;
+    width: 40vh;
+    margin-left: 350px;
+    overflow-y: hidden;
+    padding: 0;
+  }
+  
+  .mid:hover {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.75);
+  }
+  
+  .middle {
+    margin-top: 200px;
+    margin-left: 710px;
+    height: 40vh;
+    width: 40vh;
+    overflow-y: hidden;
+    padding: 0;
+  }
+  
+  .middle:hover {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.75);
+  }
+  
+  #pic1 {
+    height: 40vh;
+    width: 40vh;
+  }
+  
+  #pic2 {
+    height: 40vh;
+    width: 40vh;
+  }
+  
+  #pic3 {
+    height: 40vh;
+    width: 40vh;
+  }
+  
+  #pic4 {
+    height: 40vh;
+    width: 40vh;
+  }
+  
+  /* generic css */
+  
+  .view-first {
+    margin: 10px;
+    float: left;
+  
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    box-shadow: 1px 1px 2px #e6e6e6;
+    cursor: default;
+    right: 1px;
+    top: 100px;
+  }
+  
+  .view-second {
+    margin: 10px;
+    float: left;
+  
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    box-shadow: 1px 1px 2px #e6e6e6;
+    cursor: default;
+    left: -30px;
+    top: 100px;
+  }
+  
+  .view-tenth {
+    margin: 10px;
+    float: left;
+    border: 10px solid rgb(83, 67, 45);
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    box-shadow: 1px 1px 2px #e6e6e6;
+    cursor: default;
+    left: 80px;
+    top: 100px;
+  }
+  
+  .view-forth {
+    margin: 10px;
+    float: left;
+    border: 10px solid rgb(83, 67, 45);
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    box-shadow: 1px 1px 2px #e6e6e6;
+    cursor: default;
+    left: -120px;
+    top: 80px;
+  }
+  
+  .view .mask,
+  .view .content {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+  
+    top: 0;
+    left: 0;
+  }
+  
+  .view-tenth a.info {
+    margin-right: 10px;
+    margin-top: 20px;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    color: rgba(255, 255, 255, 0.8);
+    background: rgb(8, 7, 8);
+    font-family: Raleway, serif;
+    text-transform: uppercase;
+    box-shadow: 0 0 1px #000;
+    border-radius: 4px;
+  }
+  
+  .view a.info:hover {
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 20px 15px rgba(61, 8, 110, 0.4);
+  }
+  
+  /*1*/
+  
+  .view-first img {
+    transform: scaleY(1);
+    transition: all 0.7s ease-in-out;
+  }
+  
+  .view-first .mask {
+    background-color: rgb(158, 163, 177);
+    transition: all 0.5s linear;
+    opacity: 0;
+  }
+  
+  .view-first h2 {
+    background: transparent;
+    text-align: center;
+    transform: scale(0);
+    transition: all 0.5s linear;
+    opacity: 0;
+    color: rgb(253, 246, 246);
+    margin-right: 15px;
+    margin-top: 15px;
+    font-size: x-large;
+  }
+  
+  .view-first p {
+    color: black;
+    opacity: 0;
+    margin: 20px 40px 0px 40px;
+    transform: scale(0);
+    transition: all 0.5s linear;
+    margin-right: 60px;
+    font-size: 15px;
+  }
+  
+  .view-first a.info {
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.5s linear;
+    margin-right: 20px;
+    margin-top: 20px;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    color: rgba(255, 255, 255, 0.8);
+    background: rgb(8, 7, 8);
+    font-family: Raleway, serif;
+    text-transform: uppercase;
+    box-shadow: 0 0 1px #000;
+    border-radius: 4px;
+  }
+  
+  .view-first:hover img {
+    -webkit-transform: scale(10);
+    transform: scale(10);
+    opacity: 0;
+  }
+  
+  .view-first:hover .mask {
+    opacity: 1;
+  }
+  
+  .view-first:hover h2,
+  .view-first:hover p,
+  .view-first:hover a.info {
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+  .view-first:hover p {
+    transition-delay: 0.1s;
+  }
+  
+  .view-first:hover a.info {
+    transition-delay: 0.2s;
+  }
+  
+  /*2*/
+  
+  .view-second img {
+    transform: scaleY(1);
+    transition: all 0.7s ease-in-out;
+  }
+  
+  .view-second .mask {
+    background-color: rgb(158, 163, 177);
+    transition: all 0.5s linear;
+    opacity: 0;
+  }
+  
+  .view-second h2 {
+    background: transparent;
+    text-align: center;
+    transform: scale(0);
+    transition: all 0.5s linear;
+    opacity: 0;
+    color: rgb(253, 246, 246);
+    margin-right: 15px;
+    margin-top: 15px;
+    font-size: x-large;
+  }
+  
+  .view-second p {
+    color: black;
+    opacity: 0;
+    margin: 20px 40px 0px 40px;
+    transform: scale(0);
+    transition: all 0.5s linear;
+    margin-right: 60px;
+    font-size: 15px;
+  }
+  
+  .view-second a.info {
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.5s linear;
+    margin-right: 20px;
+    margin-top: 20px;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    color: rgba(255, 255, 255, 0.8);
+    background: rgb(8, 7, 8);
+    font-family: Raleway, serif;
+    text-transform: uppercase;
+    box-shadow: 0 0 1px #000;
+    border-radius: 4px;
+  }
+  
+  .view-second:hover img {
+    -webkit-transform: scale(10);
+    transform: scale(10);
+    opacity: 0;
+  }
+  
+  .view-second:hover .mask {
+    opacity: 1;
+  }
+  
+  .view-second:hover h2,
+  .view-second:hover p,
+  .view-second:hover a.info {
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+  .view-second:hover p {
+    transition-delay: 0.1s;
+  }
+  
+  .view-second:hover a.info {
+    transition-delay: 0.2s;
+  }
+  
+  /*3*/
+  
+  .view-tenth img {
+    transform: scaleY(1);
+    transition: all 0.7s ease-in-out;
+  }
+  
+  .view-tenth .mask {
+    background-color: rgb(158, 163, 177);
+    transition: all 0.5s linear;
+    opacity: 0;
+  }
+  
+  .view-tenth h2 {
+    background: transparent;
+    text-align: center;
+    transform: scale(0);
+    transition: all 0.5s linear;
+    opacity: 0;
+    margin-right: 30px;
+    font-size: x-large;
+  }
+  
+  .view-tenth p {
+    color: black;
+    opacity: 0;
+    margin: 20px 40px 0px 40px;
+    transform: scale(0);
+    transition: all 0.5s linear;
+    margin-right: 60px;
+    font-size: 15px;
+  }
+  
+  .view-tenth a.info {
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.5s linear;
+    margin-right: 20px;
+    margin-top: 20px;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    color: rgba(255, 255, 255, 0.8);
+    background: rgb(8, 7, 8);
+    font-family: Raleway, serif;
+    text-transform: uppercase;
+    box-shadow: 0 0 1px #000;
+    border-radius: 4px;
+  }
+  
+  .view-tenth:hover img {
+    -webkit-transform: scale(10);
+    transform: scale(10);
+    opacity: 0;
+  }
+  
+  .view-tenth:hover .mask {
+    opacity: 1;
+  }
+  
+  .view-tenth:hover h2,
+  .view-tenth:hover p,
+  .view-tenth:hover a.info {
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+  .view-tenth:hover p {
+    transition-delay: 0.1s;
+  }
+  
+  .view-tenth:hover a.info {
+    transition-delay: 0.2s;
+  }
+  
+  /*4 card*/
+  
+  .view-forth img {
+    transform: scaleY(1);
+    transition: all 0.7s ease-in-out;
+  }
+  
+  .view-forth .mask {
+    background-color: rgb(158, 163, 177);
+    transition: all 0.5s linear;
+    opacity: 0;
+  }
+  
+  .view-forth h2 {
+    background: transparent;
+    text-align: center;
+    transform: scale(0);
+    transition: all 0.5s linear;
+    opacity: 0;
+    color: rgb(253, 246, 246);
+    margin-right: 30px;
+    font-size: x-large;
+    top: 30px;
+  }
+  
+  .view-forth p {
+    color: black;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.5s linear;
+    margin-right: 60px;
+    font-size: 12px;
+  }
+  
+  .view-forth a.info {
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.5s linear;
+    margin-right: 20px;
+    margin-top: 20px;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    color: rgba(255, 255, 255, 0.8);
+    background: rgb(8, 7, 8);
+    font-family: Raleway, serif;
+    text-transform: uppercase;
+    box-shadow: 0 0 1px #000;
+    border-radius: 4px;
+  }
+  
+  .view-forth:hover img {
+    -webkit-transform: scale(10);
+    transform: scale(10);
+    opacity: 0;
+  }
+  
+  .view-forth:hover .mask {
+    opacity: 1;
+  }
+  
+  .view-forth:hover h2,
+  .view-forth:hover p,
+  .view-forth:hover a.info {
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+  .view-forth:hover p {
+    transition-delay: 0.1s;
+  }
+  
+  .view-forth:hover a.info {
+    transition-delay: 0.2s;
+  }
+  
